@@ -12,55 +12,55 @@ public class PassSceneName
 public class Package
 {
     public Package() { }
-    public static int object1;
-    public static int object2;
-    public static int object3;
-    public static int object4;
-    public static int object5;
-    public static int object6;
-    public static int object7;
-    public static int object8;
-    public static int object9;
+    public static int xiaofu;
+    public static int chizi;
+    public static int yueqi;
+    public static int yinyueren;
+    public static int xiangyantou;
+    public static int beike;
+    public static int haiyanglaji;
+    public static int yunduo;
+    public static int huaxiangji;
     public static int object10;
 
     public static void Save_data()
     {
-        PlayerPrefs.SetInt("object1", object1);
-        PlayerPrefs.SetInt("object2", object2);
-        PlayerPrefs.SetInt("object3", object3);
-        PlayerPrefs.SetInt("object4", object4);
-        PlayerPrefs.SetInt("object5", object5);
-        PlayerPrefs.SetInt("object6", object6);
-        PlayerPrefs.SetInt("object7", object7);
-        PlayerPrefs.SetInt("object8", object8);
-        PlayerPrefs.SetInt("object9", object8);
+        PlayerPrefs.SetInt("xiaofu", xiaofu);
+        PlayerPrefs.SetInt("chizi", chizi);
+        PlayerPrefs.SetInt("yueqi", yueqi);
+        PlayerPrefs.SetInt("yinyueren", yinyueren);
+        PlayerPrefs.SetInt("xiangyantou", xiangyantou);
+        PlayerPrefs.SetInt("beike", beike);
+        PlayerPrefs.SetInt("haiyanglaji", haiyanglaji);
+        PlayerPrefs.SetInt("yunduo", yunduo);
+        PlayerPrefs.SetInt("huaxiangji", huaxiangji);
         PlayerPrefs.SetInt("object10", object10);
     }
     public static void Init_package()
     {
-        object1 = 0;
-        object2 = 0;
-        object3 = 0;
-        object4 = 0;
-        object5 = 0;
-        object6 = 0;
-        object7 = 0;
-        object8 = 0;
-        object9 = 0;
+        xiaofu = 0;
+        chizi = 0;
+        yueqi = 0;
+        yinyueren = 0;
+        xiangyantou = 0;
+        beike = 0;
+        haiyanglaji = 0;
+        yunduo = 0;
+        huaxiangji = 0;
         object10 = 0;
     }
 
     public static void Load_package()
     {
-        object1 = PlayerPrefs.GetInt("object1");
-        object2 = PlayerPrefs.GetInt("object2");
-        object3 = PlayerPrefs.GetInt("object3");
-        object4 = PlayerPrefs.GetInt("object4");
-        object5 = PlayerPrefs.GetInt("object5");
-        object6 = PlayerPrefs.GetInt("object6");
-        object7 = PlayerPrefs.GetInt("object7");
-        object8 = PlayerPrefs.GetInt("object8");
-        object9 = PlayerPrefs.GetInt("object9");
+        xiaofu = PlayerPrefs.GetInt("xiaofu");
+        chizi = PlayerPrefs.GetInt("chizi");
+        yueqi = PlayerPrefs.GetInt("yueqi");
+        yinyueren = PlayerPrefs.GetInt("yinyueren");
+        xiangyantou = PlayerPrefs.GetInt("xiangyantou");
+        beike = PlayerPrefs.GetInt("beike");
+        haiyanglaji = PlayerPrefs.GetInt("haiyanglaji");
+        yunduo = PlayerPrefs.GetInt("yunduo");
+        huaxiangji = PlayerPrefs.GetInt("huaxiangji");
         object10 = PlayerPrefs.GetInt("object10");
     }
 }

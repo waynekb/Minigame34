@@ -21,10 +21,13 @@ public class start_canvas : MonoBehaviour
     void startgame()
     {
         PassSceneName.SceneName = "First";
+        Package.Init_package();
+        Package.Save_data();
         SceneManager.LoadScene("loading_sce");
     }
     void choicelevel()
     {
+        Package.Load_package();
         SceneManager.LoadScene("level_sce");
     }
     void endgame()
