@@ -18,6 +18,10 @@ public class ChangeBag : MonoBehaviour
     public Image[] ImageSet = new Image[10];
     public Text[] TextSet = new Text[10];
 
+    private Sprite[] ImageSpritSet = new Sprite[20];
+
+    public int[] IsExitImage = new int[10];
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +29,13 @@ public class ChangeBag : MonoBehaviour
         ChooseCanvas.enabled = false;
         ThingsCanvas.enabled = false;
         ExpCanvas.enabled = false;
+
+        for (int i = 0; i<20; ++i)
+        {
+            string SpritePath = "Image/" + i;
+            ImageSpritSet[i] = Resources.Load(SpritePath, typeof(Sprite)) as Sprite;
+        }
+
     }
 
     // Update is called once per frame
@@ -67,10 +78,22 @@ public class ChangeBag : MonoBehaviour
 
         for (int i = 0; i<10; ++i)
         {
-            string SpritePath = "Image/" + i;
-            Sprite ImageSprite = Resources.Load(SpritePath, typeof(Sprite)) as Sprite;
-            ImageSet[i].GetComponent<Image>().sprite = ImageSprite;
-            TextSet[i].GetComponent<Text>().text = "this is my data";
+            IsExitImage[i] = 0;
+
+            if(IsExitImage[i] == 1)
+            {
+                ImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[i];
+                TextSet[i].GetComponent<Text>().text = "this is my data";
+            }
+            else
+            {
+                ImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[i+10];
+                TextSet[i].GetComponent<Text>().text = "";
+            }
+
+
+
+
         }
     }
 }
