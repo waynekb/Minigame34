@@ -76,15 +76,15 @@ public class ChangeBag : MonoBehaviour
     {
         excuteClickThingsButton();
 
-        IsExitImage[0] = Package.object1;
-        IsExitImage[1] = Package.object2;
-        IsExitImage[2] = Package.object3;
-        IsExitImage[3] = Package.object4;
-        IsExitImage[4] = Package.object5;
-        IsExitImage[5] = Package.object6;
-        IsExitImage[6] = Package.object7;
-        IsExitImage[7] = Package.object8;
-        IsExitImage[8] = Package.object9;
+        IsExitImage[0] = Package.xiaofu;
+        IsExitImage[1] = Package.chizi;
+        IsExitImage[2] = Package.yueqi;
+        IsExitImage[3] = Package.yinyueren;
+        IsExitImage[4] = Package.xiangyantou;
+        IsExitImage[5] = Package.beike;
+        IsExitImage[6] = Package.haiyanglaji;
+        IsExitImage[7] = Package.yunduo;
+        IsExitImage[8] = Package.huaxiangji;
         IsExitImage[9] = Package.object10;
 
 

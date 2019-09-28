@@ -70,3 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9af26a0fddc471194baf6f928d42b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s_taijie: 1
+  s_yangguang: 1
+  s_shuifen: 5
+  s_yangfen: 1

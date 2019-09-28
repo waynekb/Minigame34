@@ -9,6 +9,19 @@ TagManager:
   - PlatformNum
   - EnergyNum
   - RespawnNum
+  - "\u53F0\u9636"
+  - "\u6C34\u5206"
+  - "\u80A5\u6599"
+  - "\u9633\u5149"
+  - "\u4E50\u5668"
+  - "\u4E91\u6735"
+  - "\u5C3A\u5B50"
+  - "\u6821\u670D"
+  - "\u6D77\u6D0B\u5783\u573E"
+  - "\u6ED1\u7FD4\u673A"
+  - "\u8D1D\u58F3"
+  - "\u97F3\u4E50\u4EBA"
+  - "\u9999\u70DF\u5934"
   layers:
   - Default
   - TransparentFX
