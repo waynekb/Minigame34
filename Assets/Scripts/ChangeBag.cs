@@ -76,11 +76,22 @@ public class ChangeBag : MonoBehaviour
     {
         excuteClickThingsButton();
 
+        IsExitImage[0] = Package.object1;
+        IsExitImage[1] = Package.object2;
+        IsExitImage[2] = Package.object3;
+        IsExitImage[3] = Package.object4;
+        IsExitImage[4] = Package.object5;
+        IsExitImage[5] = Package.object6;
+        IsExitImage[6] = Package.object7;
+        IsExitImage[7] = Package.object8;
+        IsExitImage[8] = Package.object9;
+        IsExitImage[9] = Package.object10;
+
+
         for (int i = 0; i<10; ++i)
         {
-            IsExitImage[i] = 0;
 
-            if(IsExitImage[i] == 1)
+            if(IsExitImage[i] != 0)
             {
                 ImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[i];
                 TextSet[i].GetComponent<Text>().text = "this is my data";
@@ -90,10 +101,6 @@ public class ChangeBag : MonoBehaviour
                 ImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[i+10];
                 TextSet[i].GetComponent<Text>().text = "";
             }
-
-
-
-
         }
     }
 }
