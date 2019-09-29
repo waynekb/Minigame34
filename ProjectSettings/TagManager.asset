@@ -22,6 +22,7 @@ TagManager:
   - "\u8D1D\u58F3"
   - "\u97F3\u4E50\u4EBA"
   - "\u9999\u70DF\u5934"
+  - "\u5F39\u5E55"
   layers:
   - Default
   - TransparentFX
@@ -59,12 +60,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 1830463563
+    locked: 0
   - name: forground
     uniqueID: 775780737
     locked: 0
   - name: hero
     uniqueID: 1264121553
-    locked: 0
-  - name: hero
-    uniqueID: 1830463563
     locked: 0

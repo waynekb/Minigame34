@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SpawnPlatform());
+        StartBarrage();
     }
 
     private void Update()

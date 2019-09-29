@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class prop : MonoBehaviour
 {
-    public int s_taijie;
-    public int s_yangguang;
-    public int s_shuifen;
-    public int s_yangfen;
+    public int abc;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.name == "hero")
