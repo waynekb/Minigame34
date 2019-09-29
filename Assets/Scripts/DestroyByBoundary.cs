@@ -8,6 +8,11 @@ public class DestroyByBoundary : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.collider.tag == "MainCamera")
+        {
+            return;
+        }
+
         if(collision.collider.tag == "Player")
         {
             PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
