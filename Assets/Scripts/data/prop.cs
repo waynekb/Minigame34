@@ -16,16 +16,16 @@ public class prop : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "台阶":
-                    props.taijie += s_taijie;
+                    GameObject.Find("hero").GetComponent<PlayerController>().AddPlatformNum(1);
                     break;
                 case "阳光":
-                    props.yangguang += s_yangguang;
+                    GameObject.Find("hero").GetComponent<PlayerController>().AddLifeNum(1);
                     break;
                 case "水分":
-
+                    GameObject.Find("hero").GetComponent<PlayerController>().AddEnergyNum(1);
                     break;
                 case "养分":
-                    props.yangfen += s_yangfen;
+                    GameObject.Find("hero").GetComponent<PlayerController>().AddRespawnNum(1);
                     break;
                 default:
                     break;

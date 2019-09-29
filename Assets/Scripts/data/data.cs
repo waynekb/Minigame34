@@ -98,18 +98,5 @@ public class SavesceneName
     }
 }
 
-public class props
-{
-    public static int yangguang;
-    public static int yangfen;
-    public static int taijie;
-
-    public static void Init_props()
-    {
-        yangguang = 0;
-        yangfen = 0;
-        taijie = 3;
-    }
-}
 
 
