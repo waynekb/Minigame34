@@ -18,30 +18,44 @@ public class ChangeScene : MonoBehaviour
         {
             case "First":
                 PassSceneName.SceneName = "Second";
+                if (Level.level < 1)
+                {
+                    Level.level = 1;
+                }
                 break;
             case "Second":
                 PassSceneName.SceneName = "Third";
+                if (Level.level < 2)
+                {
+                    Level.level = 2;
+                }
                 break;
             case "Third":
                 PassSceneName.SceneName = "Fouth";
+                if (Level.level < 3)
+                {
+                    Level.level = 3;
+                }
                 break;
             case "Fouth":
                 PassSceneName.SceneName = "Fifth";
+                if (Level.level < 4)
+                {
+                    Level.level = 4;
+                }
                 break;
             case "Fifth":
-                PassSceneName.SceneName = "Ending";
+                PassSceneName.SceneName = "Start";
+                if (Level.level < 5)
+                {
+                    Level.level = 5;
+                }
                 break;
             default:
                 break;
         }
+        Level.Save_level();
         SceneManager.LoadScene("loading_sce");
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            next_level();
-        }
-    }
 }

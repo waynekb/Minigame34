@@ -466,7 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde07502d9ac9504ba0deff0940ab8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyObjectTag: Player
   delayTime: 1
 --- !u!68 &754263789
 EdgeCollider2D:
@@ -521,7 +520,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -696536901
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1927,6 +1926,7 @@ GameObject:
   - component: {fileID: 1303049901}
   - component: {fileID: 1303049900}
   - component: {fileID: 1303049899}
+  - component: {fileID: 1303049903}
   m_Layer: 0
   m_Name: 'Main Camera '
   m_TagString: MainCamera
@@ -2015,6 +2015,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303049903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303049898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688bca60faf33418c8987ece96925d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1320051667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,16 +2145,34 @@ MonoBehaviour:
   MinForce: 250
   ForceIncreaseRate: 0
   MaxForce: 250
+  MaxVelocity: 50
   GravityMagnitude: 10
   AirResistanceThreshold: 0
   AirResistanceRate: 0
   AirResistanceSquareRate: 0
-  Dead: 0
+  Gravity: {x: 0, y: 0}
   Energy: 100
   ConsumeRate: 2
   IsAddForceByClick: 1
+  bUseForce: 0
   eventSystem: {fileID: 1804795815}
   graphicRaycaster: {fileID: 1049692193}
+  velocity:
+    combVelocity: {x: 0, y: 0}
+    leftVelocity: {x: 0, y: 0}
+    rightVelocity: {x: 0, y: 0}
+    gravityAcceleration: {x: 0, y: 0}
+  initPickups:
+    platformNum: 0
+    energyNum: 0
+    respawnNum: 0
+    lifeNum: 0
+  skillThreshold:
+    platformNum: 0
+    energyNum: 0
+    respawnNum: 0
+    lifeNum: 0
+  skillEnergyTime: 0
 --- !u!82 &1324678643
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2256,6 +2286,7 @@ MonoBehaviour:
     type: 3}
   spawnDist: 1
   spawnSpeedRate: 0.1
+  mass: 1
 --- !u!61 &1324678645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2563,7 +2594,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -696536901
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1284447673273457939, guid: d8c6d77592eb6a2418d2591f2d4b7216,
     type: 3}
@@ -2629,7 +2660,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -705138539
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3570,6 +3601,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2ef1cfeea00e647836585f0389bb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnObj: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  startTimeInternal: 1
+  spawnTimeInternal: 1
+  barrages: []
+  barrageSpawnPoint: {fileID: 0}
+  barrageBoundargy: {x: 0, y: 0}
+  barrageStartTimeInternal: 1
+  barrageSpawnTimeInternal: 1
+  barrageWaveTimeInternal: 1
+  barrageCountPerWave: 10
+  restartDelayTime: 1
 --- !u!4 &2068767595
 Transform:
   m_ObjectHideFlags: 0

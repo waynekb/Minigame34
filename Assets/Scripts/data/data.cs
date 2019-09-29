@@ -65,6 +65,24 @@ public class Package
     }
 }
 
+public class Level
+{
+    public static int level;
+    public static void Init_level()
+    {
+        level = 0;
+    }
+
+    public static void Save_level()
+    {
+        PlayerPrefs.SetInt("level", level);
+    }
+    public static void Load_level()
+    {
+        level = PlayerPrefs.GetInt("level");
+    }
+}
+
 public class SavesceneName
 {
 
