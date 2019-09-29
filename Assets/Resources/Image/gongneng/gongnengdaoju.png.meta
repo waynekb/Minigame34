@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -937454700957013307
-    second: "\u529F\u80FD\u9053\u5177_0"
+    second: huafei0
   - first:
       213: -1787205681089243945
-    second: "\u529F\u80FD\u9053\u5177_1"
+    second: sun0
   - first:
       213: 2201591387795631457
-    second: "\u529F\u80FD\u9053\u5177_2"
+    second: huafei1
   - first:
       213: 6055196038313153268
-    second: "\u529F\u80FD\u9053\u5177_3"
+    second: sun1
   - first:
       213: 4227004281270231065
-    second: "\u529F\u80FD\u9053\u5177_4"
+    second: huafei2
   - first:
       213: 1643859672490219143
-    second: "\u529F\u80FD\u9053\u5177_5"
+    second: sun2
   - first:
       213: -8440953438940013181
-    second: "\u529F\u80FD\u9053\u5177_6"
+    second: huafei3
   - first:
       213: -2091808160906460682
-    second: "\u529F\u80FD\u9053\u5177_7"
+    second: sun3
   - first:
       213: -4919316820921573410
-    second: "\u529F\u80FD\u9053\u5177_8"
+    second: chengfuhao
   - first:
       213: 8871199430842206731
     second: "\u529F\u80FD\u9053\u5177_9"
@@ -128,11 +128,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_0"
+      name: huafei0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 1733
+        x: 0
+        y: 1761
         width: 635
         height: 183
       alignment: 0
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_1"
+      name: sun0
       rect:
         serializedVersion: 2
         x: 764
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_2"
+      name: huafei1
       rect:
         serializedVersion: 2
         x: 71
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_3"
+      name: sun1
       rect:
         serializedVersion: 2
         x: 764
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_4"
+      name: huafei2
       rect:
         serializedVersion: 2
         x: 74
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_5"
+      name: sun2
       rect:
         serializedVersion: 2
         x: 764
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_6"
+      name: huafei3
       rect:
         serializedVersion: 2
         x: 77
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_7"
+      name: sun3
       rect:
         serializedVersion: 2
         x: 753
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u529F\u80FD\u9053\u5177_8"
+      name: chengfuhao
       rect:
         serializedVersion: 2
         x: 201

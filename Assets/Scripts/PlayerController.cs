@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [System.Serializable]
-struct Pickups
+public struct Pickups
 {
     public int platformNum;
     public int energyNum;
@@ -469,5 +469,10 @@ public class PlayerController : MonoBehaviour
     public float GetEnerge()
     {
         return Energy;
+    }
+
+    public Pickups GetPickups()
+    {
+        return pickups;
     }
 }
