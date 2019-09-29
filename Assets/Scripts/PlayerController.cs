@@ -14,7 +14,7 @@ public struct Pickups
 };
 
 [System.Serializable]
-struct Velocity
+public struct Velocity
 {
     public Vector2 combVelocity;
     public Vector2 leftVelocity;
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 lastPlatform ;
     private Vector2 respawnPlatform;
     private bool bRespawnPlatform;
-    private float respawnTime = 0.5f;
+    private float respawnTime = 0.2f;
 
     private int life = 1;
 
@@ -84,10 +84,11 @@ public class PlayerController : MonoBehaviour
         Gravity = new Vector2(0.0f, -GravityMagnitude);
         maxEnergy = Energy;
     }
-
+    Animator hero;
     private void Start()
     {
         Init();
+        hero = gameObject.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -132,11 +133,13 @@ public class PlayerController : MonoBehaviour
                     if (touch.position.x < Screen.width / 2 && (!IsAddForceByClick || touch.phase == TouchPhase.Began))
                     {
                         LeftInput = true;
+                        hero.SetTrigger("zuo");
                     }
 
                     if (touch.position.x > Screen.width / 2 && (!IsAddForceByClick || touch.phase == TouchPhase.Began))
                     {
                         RightInput = true;
+                        hero.SetTrigger("you");
                     }
                 }
             }
@@ -155,6 +158,11 @@ public class PlayerController : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
+                    AddEnergyNum(1);
+                    AddLifeNum(1);
+                    AddRespawnNum(1);
+                    AddPlatformNum(1);
+
                     if (Input.mousePosition.x < Screen.width / 2)
                     {
                         LeftInput = true;
@@ -215,7 +223,7 @@ public class PlayerController : MonoBehaviour
             return false;
         }
 
-        return EventSystem.current.IsPointerOverGameObject();
+        return (EventSystem.current == null) || EventSystem.current.IsPointerOverGameObject();
     }
 
     private void Move()
@@ -258,11 +266,6 @@ public class PlayerController : MonoBehaviour
 
     private void AddInputForce()
     {
-        if (LeftInput || RightInput)
-        {
-            GameAudios.PlaySfx(gameObject, GameAudios.jumpSfx);
-        }
-
         if (LeftInput)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(LeftForce * LeftForceDirection.normalized);
@@ -312,8 +315,6 @@ public class PlayerController : MonoBehaviour
     {
         bIsDead = true;
 
-        GameAudios.PlaySfx(gameObject, GameAudios.landDeadSfx);
-
         if (bRespawnPlatform)
         {
             StartCoroutine(Respawn());
@@ -321,7 +322,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             GameController.Get().GameOver();
-            Destroy(gameObject, respawnTime);
+            Destroy(gameObject);
         }
     }
 
@@ -395,10 +396,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public Pickups GetPickups()
+    {
+        return pickups;
+    }
+
     IEnumerator SkillEnergy()
     {
-        GameAudios.PlaySfx(gameObject, GameAudios.buffSfx);
-
         float consumerate = ConsumeRate;
         ConsumeRate = 0.0f;
 
@@ -409,16 +413,12 @@ public class PlayerController : MonoBehaviour
 
     private void SkillRespawn()
     {
-        GameAudios.PlaySfx(gameObject, GameAudios.buffSfx);
-
         respawnPlatform = lastPlatform;
         bRespawnPlatform = true;
     }
 
     private void SkillLife()
     {
-        GameAudios.PlaySfx(gameObject, GameAudios.buffSfx);
-
         AddLife(1);
     }
 
@@ -471,8 +471,4 @@ public class PlayerController : MonoBehaviour
         return Energy;
     }
 
-    public Pickups GetPickups()
-    {
-        return pickups;
-    }
 }
