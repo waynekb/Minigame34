@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [System.Serializable]
-struct Pickups
+public struct Pickups
 {
     public int platformNum;
     public int energyNum;
@@ -14,7 +14,7 @@ struct Pickups
 };
 
 [System.Serializable]
-struct Velocity
+public struct Velocity
 {
     public Vector2 combVelocity;
     public Vector2 leftVelocity;
@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
             return false;
         }
 
-        return EventSystem.current.IsPointerOverGameObject();
+        return (EventSystem.current == null) || EventSystem.current.IsPointerOverGameObject();
     }
 
     private void Move()
@@ -394,6 +394,11 @@ public class PlayerController : MonoBehaviour
         {
             OnDead();
         }
+    }
+
+    public Pickups GetPickups()
+    {
+        return pickups;
     }
 
     IEnumerator SkillEnergy()
