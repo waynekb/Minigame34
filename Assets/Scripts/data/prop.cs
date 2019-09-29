@@ -12,6 +12,7 @@ public class prop : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "台阶":
+
                     break;
                 case "阳光":
                     break;
