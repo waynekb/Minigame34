@@ -127,10 +127,16 @@ public class ChangeBag : MonoBehaviour
         IsExitThings[7] = Package.yunduo;
         IsExitThings[8] = Package.huaxiangji;
 
-        for (int i = 0; i < 9; ++i)
-        {
-            IsExitThings[i] = 1;
-        }
+        IsExitThings[0] = 0;
+        IsExitThings[1] = 1;
+        IsExitThings[2] = 1;
+        IsExitThings[3] = 1;
+        IsExitThings[4] = 0;
+        IsExitThings[5] = 1;
+        IsExitThings[6] = 0;
+        IsExitThings[7] = 1;
+        IsExitThings[8] = 1;
+
 
         for (int i = 0; i<9; ++i)
         {
@@ -180,8 +186,8 @@ public class ChangeBag : MonoBehaviour
         else
         {
             ThingsDetailCanvas.enabled = true;
-            DetailText.text = "第1个按钮";
-            
+            DetailText.text = "普通的贝壳，拿起来轻飘飘的。\n砂砾在里面会变成珍珠。\n但也仅仅是普普通通的珍珠而已。";
+
         }
     }
 
@@ -194,7 +200,7 @@ public class ChangeBag : MonoBehaviour
         else
         {
             ThingsDetailCanvas.enabled = true;
-            DetailText.text = "第2个按钮";
+            DetailText.text = "用来量尺寸是否标准的尺子。\n和外表一样循规蹈矩。\n是否暗示着有标准规则的未来？";
 
         }
     }
@@ -208,7 +214,7 @@ public class ChangeBag : MonoBehaviour
         else
         {
             ThingsDetailCanvas.enabled = true;
-            DetailText.text = "第3个按钮";
+            DetailText.text = "一把精美的吉他。\n能够演奏出无限可能的音乐。\n任意风格、流派都OK。";
 
         }
     }
@@ -222,7 +228,7 @@ public class ChangeBag : MonoBehaviour
         else
         {
             ThingsDetailCanvas.enabled = true;
-            DetailText.text = "第4个按钮";
+            DetailText.text = "凑近能闻到难闻气味的海洋垃圾。\n最好不要碰到，但如果你看到这行字。\n说明前路已经开始发生改变。";
 
         }
     }
@@ -236,7 +242,7 @@ public class ChangeBag : MonoBehaviour
         else
         {
             ThingsDetailCanvas.enabled = true;
-            DetailText.text = "第5个按钮";
+            DetailText.text = "不像是应该出现在这里的东西。\n味道也并不好闻。\n一旦尝试可能会被改变命运。";
 
         }
     }
@@ -250,7 +256,7 @@ public class ChangeBag : MonoBehaviour
         else
         {
             ThingsDetailCanvas.enabled = true;
-            DetailText.text = "第6个按钮";
+            DetailText.text = "一朵会唱歌的云。\n这不荒唐——因为它也有不想被定义的梦想。\n在触碰的一瞬间，音乐的魅力在此被领悟。";
 
         }
     }
