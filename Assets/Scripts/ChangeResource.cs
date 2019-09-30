@@ -16,23 +16,23 @@ public class ChangeResource : MonoBehaviour
     private int HuafeiNum = 0;
     private int PlaneNum = 0;
 
-    private Sprite[] ResourcesSpriteSet = new Sprite[6];
+    private Sprite[] ResourcesSpriteSet = new Sprite[8];
 
     void Start()
     {
         string[] ImagePath = new string[8];
-        ImagePath[0] = "huafei0";
-        ImagePath[1] = "huafei1";
-        ImagePath[2] = "huafei2";
         ImagePath[4] = "sun0";
         ImagePath[5] = "sun1";
         ImagePath[6] = "sun2";
+        ImagePath[0] = "huafei0";
+        ImagePath[1] = "huafei1";
+        ImagePath[2] = "huafei2";
         ImagePath[7] = "panel";
         ImagePath[8] = "chengfuhao";
 
         for (int i = 0; i < 8; ++i)
         {
-            string SpritePath = "Image/Card/" + "Card1_Color";
+            string SpritePath = "Image/gongneng/" + "sun0";
             ResourcesSpriteSet[i] = Resources.Load(SpritePath, typeof(Sprite)) as Sprite;
         }
 
@@ -48,7 +48,7 @@ public class ChangeResource : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        UpdateResourceInfo();
     }
 
     public void UpdateResourceInfo()
@@ -68,7 +68,9 @@ public class ChangeResource : MonoBehaviour
         SunNum = pickups.lifeNum;
         HuafeiNum = pickups.respawnNum;
         PlaneNum = pickups.platformNum;
-
+        print(SunNum);
+        print(HuafeiNum);
+        print(PlaneNum);
         UpdateResourceImage();
         UpdateResourceText();
     }
