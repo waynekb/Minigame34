@@ -32,4 +32,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fifth.unity
     guid: d1240d49f35ff5a4c8cf1a242ff0b3d0
+  - enabled: 1
+    path: Assets/Scenes/Niu_Dan.unity
+    guid: 3e95ef26cf6b3bc449dfa2ca3f6dc624
+  - enabled: 1
+    path: Assets/Scenes/TuZi.unity
+    guid: 13065ef742c03cf429a16fbf7976de60
+  - enabled: 1
+    path: Assets/Scenes/JinRu.unity
+    guid: 89b25bc5650fe6f40b04d5e3fb426410
+  - enabled: 1
+    path: Assets/Scenes/Sixth.unity
+    guid: 2f3318e58bf834d44b5206230468ab1d
   m_configObjects: {}

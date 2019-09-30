@@ -22,7 +22,7 @@ public class danmu : MonoBehaviour
     {
         string scenename = SceneManager.GetActiveScene().name;
         int num = 0;
-        print(sp2.Length);
+       
         switch (scenename)
         {
             case "First":

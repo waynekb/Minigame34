@@ -158,11 +158,6 @@ public class PlayerController : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    AddEnergyNum(1);
-                    AddLifeNum(1);
-                    AddRespawnNum(1);
-                    AddPlatformNum(1);
-
                     if (Input.mousePosition.x < Screen.width / 2)
                     {
                         LeftInput = true;
@@ -349,9 +344,9 @@ public class PlayerController : MonoBehaviour
     public void AddEnergyNum(int num)
     {
         pickups.energyNum += num;
-        if(pickups.energyNum == skillThreshold.energyNum)
+        if(pickups.energyNum % skillThreshold.energyNum == 0)
         {
-            pickups.energyNum = 0;
+            //pickups.energyNum = 0;
             Energy = maxEnergy;
             StartCoroutine(SkillEnergy());
         }
@@ -369,9 +364,9 @@ public class PlayerController : MonoBehaviour
     public void AddRespawnNum(int num)
     {
         pickups.respawnNum += num;
-        if (pickups.respawnNum == skillThreshold.respawnNum)
+        if (pickups.respawnNum % skillThreshold.respawnNum == 0)
         {
-            pickups.respawnNum = 0;
+            //pickups.respawnNum = 0;
             SkillRespawn();
         }
     }
@@ -380,9 +375,9 @@ public class PlayerController : MonoBehaviour
     {
         pickups.lifeNum += num;
 
-        if (pickups.lifeNum == skillThreshold.lifeNum)
+        if (pickups.lifeNum % skillThreshold.lifeNum == 0)
         {
-            pickups.lifeNum = 0;
+            //pickups.lifeNum = 0;
             SkillLife();
         }
     }
@@ -470,4 +465,5 @@ public class PlayerController : MonoBehaviour
     {
         return Energy;
     }
+
 }
