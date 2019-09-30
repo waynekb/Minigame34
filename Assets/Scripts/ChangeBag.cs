@@ -17,6 +17,8 @@ public class ChangeBag : MonoBehaviour
     public Button[] ThingsButtonSet = new Button[9];
     public Image[] CardImageSet   = new Image[6];
 
+    public Text DetailText;
+
     private int[] IsExitThings = new int[9];
     private int[] IsExitCards = new int[6];
 
@@ -165,6 +167,30 @@ public class ChangeBag : MonoBehaviour
 
     public void clickThingsButton0()
     {
-        ThingsDetailCanvas.enabled = true;
+        if(IsExitThings[0] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "Myfirst";
+            
+        }
+    }
+
+    public void clickThingsButton1()
+    {
+        IsExitThings[1] = 1;
+        if (IsExitThings[1] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第2个按钮";
+
+        }
     }
 }
