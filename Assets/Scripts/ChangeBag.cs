@@ -8,11 +8,13 @@ public class ChangeBag : MonoBehaviour
     public Button OpenButton;
     public Canvas ChooseCanvas;
     public Canvas ThingsCanvas;
-    public Canvas ThingsDetailCanvas;
     public Canvas ExpCanvas;
     public Button ThingsButton;
     public Button ExpButton;
     public Button ExitButton;
+
+    public Canvas ThingsDetailCanvas;
+    public Button ExitDetailButton;
 
     public Button[] ThingsButtonSet = new Button[9];
     public Image[] CardImageSet   = new Image[6];
@@ -116,7 +118,6 @@ public class ChangeBag : MonoBehaviour
         excuteClickThingsButton();
 
         IsExitThings[0] = Package.xiaofu;
-        IsExitThings[0] = 1;
         IsExitThings[1] = Package.chizi;
         IsExitThings[2] = Package.yueqi;
         IsExitThings[3] = Package.yinyueren;
@@ -125,6 +126,11 @@ public class ChangeBag : MonoBehaviour
         IsExitThings[6] = Package.haiyanglaji;
         IsExitThings[7] = Package.yunduo;
         IsExitThings[8] = Package.huaxiangji;
+
+        for (int i = 0; i < 9; ++i)
+        {
+            IsExitThings[i] = 1;
+        }
 
         for (int i = 0; i<9; ++i)
         {
@@ -174,14 +180,13 @@ public class ChangeBag : MonoBehaviour
         else
         {
             ThingsDetailCanvas.enabled = true;
-            DetailText.text = "Myfirst";
+            DetailText.text = "第1个按钮";
             
         }
     }
 
     public void clickThingsButton1()
     {
-        IsExitThings[1] = 1;
         if (IsExitThings[1] == 0)
         {
             ThingsDetailCanvas.enabled = false;
@@ -192,5 +197,108 @@ public class ChangeBag : MonoBehaviour
             DetailText.text = "第2个按钮";
 
         }
+    }
+
+    public void clickThingsButton2()
+    {
+        if (IsExitThings[2] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第3个按钮";
+
+        }
+    }
+
+    public void clickThingsButton3()
+    {
+        if (IsExitThings[3] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第4个按钮";
+
+        }
+    }
+
+    public void clickThingsButton4()
+    {
+        if (IsExitThings[4] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第5个按钮";
+
+        }
+    }
+
+    public void clickThingsButton5()
+    {
+        if (IsExitThings[5] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第6个按钮";
+
+        }
+    }
+
+    public void clickThingsButton6()
+    {
+        if (IsExitThings[6] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第7个按钮";
+
+        }
+    }
+
+    public void clickThingsButton7()
+    {
+        if (IsExitThings[7] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第8个按钮";
+
+        }
+    }
+
+    public void clickThingsButton8()
+    {
+        if (IsExitThings[8] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第9个按钮";
+
+        }
+    }
+
+    public void clickExitDetailButton()
+    {
+        ThingsDetailCanvas.enabled = false;
     }
 }
