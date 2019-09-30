@@ -21,18 +21,18 @@ public class ChangeResource : MonoBehaviour
     void Start()
     {
         string[] ImagePath = new string[8];
-        ImagePath[4] = "sun0";
-        ImagePath[5] = "sun1";
-        ImagePath[6] = "sun2";
-        ImagePath[0] = "huafei0";
-        ImagePath[1] = "huafei1";
-        ImagePath[2] = "huafei2";
-        ImagePath[7] = "panel";
-        ImagePath[8] = "chengfuhao";
+        ImagePath[0] = "sun0";
+        ImagePath[1] = "sun1";
+        ImagePath[2] = "sun2";
+        ImagePath[3] = "huafei0";
+        ImagePath[4] = "huafei1";
+        ImagePath[5] = "huafei2";
+        ImagePath[6] = "panel";
+        ImagePath[7] = "chengfuhao";
 
         for (int i = 0; i < 8; ++i)
         {
-            string SpritePath = "Image/gongneng/" + "sun0";
+            string SpritePath = "Image/gongneng/" + ImagePath[i];
             ResourcesSpriteSet[i] = Resources.Load(SpritePath, typeof(Sprite)) as Sprite;
         }
 
@@ -40,9 +40,9 @@ public class ChangeResource : MonoBehaviour
         TextSun.GetComponent<Text>().text = "0";
         TextPanel.GetComponent<Text>().text = "0";
 
-        ImageHuafei.GetComponent<Image>().sprite = ResourcesSpriteSet[0];
-        ImagePanel.GetComponent<Image>().sprite = ResourcesSpriteSet[4];
-        ImageSun.GetComponent<Image>().sprite = ResourcesSpriteSet[7];
+        ImageSun.GetComponent<Image>().sprite = ResourcesSpriteSet[0];
+        ImageHuafei.GetComponent<Image>().sprite = ResourcesSpriteSet[3];
+        ImagePanel.GetComponent<Image>().sprite = ResourcesSpriteSet[6];
     }
 
     // Update is called once per frame
