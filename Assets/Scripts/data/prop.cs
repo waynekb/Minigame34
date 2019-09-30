@@ -9,7 +9,6 @@ public class prop : MonoBehaviour
     {
         if(collision.name == "hero")
         {
-            print(gameObject.tag);
             switch (gameObject.tag)
             {
                 case "台阶":
@@ -32,6 +31,7 @@ public class prop : MonoBehaviour
                     break;
 
             }
+            Destroy(gameObject);
         }
     }
 }
