@@ -785,7 +785,7 @@ PrefabInstance:
     - target: {fileID: 8999284486723293992, guid: 1b214dc26dcec594c9dba1328436562a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8999284486723293992, guid: 1b214dc26dcec594c9dba1328436562a,
         type: 3}
@@ -1668,7 +1668,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3012,7 +3012,7 @@ Camera:
   far clip plane: 1000
   field of view: 88
   orthographic: 1
-  orthographic size: 3.6683598
+  orthographic size: 3.490084
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3452,14 +3452,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f163717764a542aa7a00b7831d190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImageSet:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  TextSet:
-  - {fileID: 258005701}
-  - {fileID: 0}
-  - {fileID: 0}
+  ImageHuafei: {fileID: 0}
+  ImageSun: {fileID: 0}
+  ImagePanel: {fileID: 0}
+  TextHuafei: {fileID: 0}
+  TextSun: {fileID: 0}
+  TextPanel: {fileID: 0}
 --- !u!224 &576094712 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7806237442630410651, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
@@ -7633,6 +7631,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407593321}
   m_CullTransparentMesh: 0
+--- !u!1001 &1418552525
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1210075986465335867, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_Name
+      value: "\u5F39\u5E55"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 454fa41681fbb4b75bd72495de54fc14, type: 3}
 --- !u!1 &1431774508
 GameObject:
   m_ObjectHideFlags: 0
@@ -9653,7 +9720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847003622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.003, y: 0, z: 0}
+  m_LocalPosition: {x: 0.09, y: 0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 936767577}
@@ -10517,11 +10584,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4501233674149544258, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7806237442604007278, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -10605,7 +10667,7 @@ PrefabInstance:
     - target: {fileID: 7806237442630410651, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7806237442630410651, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
@@ -10670,6 +10732,11 @@ PrefabInstance:
     - target: {fileID: 7806237442630410651, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501233674149544258, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7806237442630410629, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
@@ -11185,14 +11252,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f163717764a542aa7a00b7831d190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImageSet:
-  - {fileID: 1708072719}
-  - {fileID: 0}
-  - {fileID: 0}
-  TextSet:
-  - {fileID: 258005701}
-  - {fileID: 0}
-  - {fileID: 0}
+  ImageHuafei: {fileID: 0}
+  ImageSun: {fileID: 0}
+  ImagePanel: {fileID: 0}
+  TextHuafei: {fileID: 0}
+  TextSun: {fileID: 0}
+  TextPanel: {fileID: 0}
 --- !u!114 &2014306265
 MonoBehaviour:
   m_ObjectHideFlags: 0
