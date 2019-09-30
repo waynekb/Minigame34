@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class ChangeResource : MonoBehaviour
 {
-    public Image ImageHuafei;
     public Image ImageSun;
+    public Image ImageHuafei;
     public Image ImagePanel;
-    public Text TextHuafei;
     public Text TextSun;
+    public Text TextHuafei;
     public Text TextPanel;
 
     private int SunNum = 0;
@@ -27,20 +27,22 @@ public class ChangeResource : MonoBehaviour
         ImagePath[4] = "sun0";
         ImagePath[5] = "sun1";
         ImagePath[6] = "sun2";
+        ImagePath[7] = "panel";
+        ImagePath[8] = "chengfuhao";
 
-        for (int i = 0; i < 6; ++i)
+        for (int i = 0; i < 8; ++i)
         {
             string SpritePath = "Image/Card/" + "Card1_Color";
             ResourcesSpriteSet[i] = Resources.Load(SpritePath, typeof(Sprite)) as Sprite;
         }
 
-        TextHuafei.GetComponent<Text>().text = "1";
-        TextSun.GetComponent<Text>().text = "1";
-        TextPanel.GetComponent<Text>().text = "1";
+        TextHuafei.GetComponent<Text>().text = "0";
+        TextSun.GetComponent<Text>().text = "0";
+        TextPanel.GetComponent<Text>().text = "0";
 
-        ImageHuafei.GetComponent<Image>().sprite = ResourcesSpriteSet[1];
-        ImagePanel.GetComponent<Image>().sprite = ResourcesSpriteSet[1];
-        ImageSun.GetComponent<Image>().sprite = ResourcesSpriteSet[5];
+        ImageHuafei.GetComponent<Image>().sprite = ResourcesSpriteSet[0];
+        ImagePanel.GetComponent<Image>().sprite = ResourcesSpriteSet[4];
+        ImageSun.GetComponent<Image>().sprite = ResourcesSpriteSet[7];
     }
 
     // Update is called once per frame
@@ -75,7 +77,6 @@ public class ChangeResource : MonoBehaviour
     {
         int RemainSunNumn = SunNum % 3;
         int RemainHuafeiNum = HuafeiNum % 3;
-        int RemainPanelNum = PlaneNum % 3;
 
         if(RemainSunNumn == 0)
         {
@@ -102,6 +103,8 @@ public class ChangeResource : MonoBehaviour
         {
             ImageHuafei.GetComponent<Image>().sprite = ResourcesSpriteSet[5];
         }
+
+        ImagePanel.GetComponent<Image>().sprite = ResourcesSpriteSet[6];
     }
 
     private void UpdateResourceText()

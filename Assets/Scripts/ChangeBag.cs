@@ -8,14 +8,18 @@ public class ChangeBag : MonoBehaviour
     public Button OpenButton;
     public Canvas ChooseCanvas;
     public Canvas ThingsCanvas;
-    public Canvas ThingsDetailCanvas;
     public Canvas ExpCanvas;
     public Button ThingsButton;
     public Button ExpButton;
     public Button ExitButton;
 
+    public Canvas ThingsDetailCanvas;
+    public Button ExitDetailButton;
+
     public Button[] ThingsButtonSet = new Button[9];
     public Image[] CardImageSet   = new Image[6];
+
+    public Text DetailText;
 
     private int[] IsExitThings = new int[9];
     private int[] IsExitCards = new int[6];
@@ -114,7 +118,6 @@ public class ChangeBag : MonoBehaviour
         excuteClickThingsButton();
 
         IsExitThings[0] = Package.xiaofu;
-        IsExitThings[0] = 1;
         IsExitThings[1] = Package.chizi;
         IsExitThings[2] = Package.yueqi;
         IsExitThings[3] = Package.yinyueren;
@@ -123,6 +126,17 @@ public class ChangeBag : MonoBehaviour
         IsExitThings[6] = Package.haiyanglaji;
         IsExitThings[7] = Package.yunduo;
         IsExitThings[8] = Package.huaxiangji;
+
+        IsExitThings[0] = 0;
+        IsExitThings[1] = 1;
+        IsExitThings[2] = 1;
+        IsExitThings[3] = 1;
+        IsExitThings[4] = 0;
+        IsExitThings[5] = 1;
+        IsExitThings[6] = 0;
+        IsExitThings[7] = 1;
+        IsExitThings[8] = 1;
+
 
         for (int i = 0; i<9; ++i)
         {
@@ -165,6 +179,132 @@ public class ChangeBag : MonoBehaviour
 
     public void clickThingsButton0()
     {
-        ThingsDetailCanvas.enabled = true;
+        if(IsExitThings[0] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "普通的贝壳，拿起来轻飘飘的。\n砂砾在里面会变成珍珠。\n但也仅仅是普普通通的珍珠而已。";
+
+        }
+    }
+
+    public void clickThingsButton1()
+    {
+        if (IsExitThings[1] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "用来量尺寸是否标准的尺子。\n和外表一样循规蹈矩。\n是否暗示着有标准规则的未来？";
+
+        }
+    }
+
+    public void clickThingsButton2()
+    {
+        if (IsExitThings[2] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "一把精美的吉他。\n能够演奏出无限可能的音乐。\n任意风格、流派都OK。";
+
+        }
+    }
+
+    public void clickThingsButton3()
+    {
+        if (IsExitThings[3] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "凑近能闻到难闻气味的海洋垃圾。\n最好不要碰到，但如果你看到这行字。\n说明前路已经开始发生改变。";
+
+        }
+    }
+
+    public void clickThingsButton4()
+    {
+        if (IsExitThings[4] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "不像是应该出现在这里的东西。\n味道也并不好闻。\n一旦尝试可能会被改变命运。";
+
+        }
+    }
+
+    public void clickThingsButton5()
+    {
+        if (IsExitThings[5] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "一朵会唱歌的云。\n这不荒唐——因为它也有不想被定义的梦想。\n在触碰的一瞬间，音乐的魅力在此被领悟。";
+
+        }
+    }
+
+    public void clickThingsButton6()
+    {
+        if (IsExitThings[6] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第7个按钮";
+
+        }
+    }
+
+    public void clickThingsButton7()
+    {
+        if (IsExitThings[7] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第8个按钮";
+
+        }
+    }
+
+    public void clickThingsButton8()
+    {
+        if (IsExitThings[8] == 0)
+        {
+            ThingsDetailCanvas.enabled = false;
+        }
+        else
+        {
+            ThingsDetailCanvas.enabled = true;
+            DetailText.text = "第9个按钮";
+
+        }
+    }
+
+    public void clickExitDetailButton()
+    {
+        ThingsDetailCanvas.enabled = false;
     }
 }
