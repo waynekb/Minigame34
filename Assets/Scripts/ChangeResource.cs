@@ -71,9 +71,6 @@ public class ChangeResource : MonoBehaviour
         SunNum = pickups.lifeNum;
         HuafeiNum = pickups.respawnNum;
         PlaneNum = pickups.platformNum;
-        print(SunNum);
-        print(HuafeiNum);
-        print(PlaneNum);
         UpdateResourceImage();
         UpdateResourceText();
     }

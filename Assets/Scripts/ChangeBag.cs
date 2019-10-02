@@ -107,15 +107,12 @@ public class ChangeBag : MonoBehaviour
         IsExitThings[7] = Package.yunduo;
         IsExitThings[8] = Package.huaxiangji;
 
-        IsExitThings[0] = 1;
-
-
         for (int i = 0; i<6; ++i)
         {
 
             if(IsExitThings[i] != 0)
             {
-                ThingsButtonSet[i].GetComponent<Image>().sprite = ImageSpritSet[2*i];
+                ThingsButtonSet[i].GetComponent<Image>().sprite = ImageSpritSet[2*i + 1];
             }
             else
             {
@@ -137,11 +134,11 @@ public class ChangeBag : MonoBehaviour
 
             if (IsExitCards[i] != 0)
             {
-                CardImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[18+2*i + 1];
+                CardImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[12+2*i + 1];
             }
             else
             {
-                CardImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[18+2*i];
+                CardImageSet[i].GetComponent<Image>().sprite = ImageSpritSet[12+2*i];
             }
         }
     }
