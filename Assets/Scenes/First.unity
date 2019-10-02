@@ -2389,7 +2389,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 443848113}
-        m_MethodName: excuteClickThingsButton
+        m_MethodName: DisplayThingPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2889,7 +2889,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 0
 --- !u!222 &444236010
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3630,7 +3630,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1984784111}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 921023002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -5692,6 +5692,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.7532072, y: 0.99999964}
+--- !u!1 &921023002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7806237442630410631, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1984784111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &921023005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921023002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f1f163717764a542aa7a00b7831d190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImageSun: {fileID: 1084456974}
+  ImageHuafei: {fileID: 1059553632}
+  ImagePanel: {fileID: 1271827552}
+  TextSun: {fileID: 444236009}
+  TextHuafei: {fileID: 40231055}
+  TextPanel: {fileID: 26617688}
 --- !u!1 &922961353
 GameObject:
   m_ObjectHideFlags: 0
@@ -7006,7 +7030,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 443848113}
-        m_MethodName: excuteClickExpButton
+        m_MethodName: DisplayExpPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

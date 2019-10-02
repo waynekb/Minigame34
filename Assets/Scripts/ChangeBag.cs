@@ -17,7 +17,7 @@ public class ChangeBag : MonoBehaviour
     public Button ExitButton;
     public Button ExitDetailButton;
 
-    public Button[] ThingsButtonSet = new Button[9];
+    public Button[] ThingsButtonSet = new Button[6];
     public Image[] CardImageSet   = new Image[6];
 
     public Text DetailText;
@@ -25,7 +25,7 @@ public class ChangeBag : MonoBehaviour
     private int[] IsExitThings = new int[9];
     private int[] IsExitCards = new int[6];
 
-    private Sprite[] ImageSpritSet = new Sprite[30];
+    private Sprite[] ImageSpritSet = new Sprite[24];
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class ChangeBag : MonoBehaviour
         ExperiencePanel.SetActive(false);
         DetailPanel.SetActive(false);
 
-        string[] FileName = new string[30];
+        string[] FileName = new string[24];
         FileName[0] = "Things/beike";
         FileName[1] = "Things/beike_color";
         FileName[2] = "Things/chizi";
@@ -48,27 +48,21 @@ public class ChangeBag : MonoBehaviour
         FileName[9] = "Things/xiangyan_color";
         FileName[10] = "Things/yundong";
         FileName[11] = "Things/yunduo_color";
-        FileName[12] = "Things/beike";
-        FileName[13] = "Things/beike";
-        FileName[14] = "Things/beike";
-        FileName[15] = "Things/beike";
-        FileName[16] = "Things/beike";
-        FileName[17] = "Things/beike";
 
-        FileName[18] = "Card/Card1";
-        FileName[19] = "Card/Card1_Color";
-        FileName[20] = "Card/Card2";
-        FileName[21] = "Card/Card2_Color";
-        FileName[22] = "Card/Card3";
-        FileName[23] = "Card/Card3_Color";
-        FileName[24] = "Card/Card4";
-        FileName[25] = "Card/Card4_Color";
-        FileName[26] = "Card/Card5";
-        FileName[27] = "Card/Card5_Color";
-        FileName[28] = "Card/Card6";
-        FileName[29] = "Card/Card6_Color";
+        FileName[12] = "Card/Card1";
+        FileName[13] = "Card/Card1_Color";
+        FileName[14] = "Card/Card2";
+        FileName[15] = "Card/Card2_Color";
+        FileName[16] = "Card/Card3";
+        FileName[17] = "Card/Card3_Color";
+        FileName[18] = "Card/Card4";
+        FileName[19] = "Card/Card4_Color";
+        FileName[20] = "Card/Card5";
+        FileName[21] = "Card/Card5_Color";
+        FileName[22] = "Card/Card6";
+        FileName[23] = "Card/Card6_Color";
 
-        for (int i = 0; i<30; ++i)
+        for (int i = 0; i<24; ++i)
         {
             string SpritePath = "Image/" + FileName[i];
             ImageSpritSet[i] = Resources.Load(SpritePath, typeof(Sprite)) as Sprite;
@@ -83,12 +77,6 @@ public class ChangeBag : MonoBehaviour
 
     public void excuteClickOpenButton()
     {
-        TotalPanel.SetActive(true);
-        ChoosePanel.SetActive(true);
-        ThingsPanel.SetActive(true);
-        ExperiencePanel.SetActive(false);
-        DetailPanel.SetActive(false);
-
         DisplayThingPanel();
     }
 
@@ -101,27 +89,13 @@ public class ChangeBag : MonoBehaviour
         DetailPanel.SetActive(false);
     }
 
-    public void excuteClickThingsButton()
+    public void DisplayThingPanel()
     {
         TotalPanel.SetActive(true);
         ChoosePanel.SetActive(true);
         ThingsPanel.SetActive(true);
         ExperiencePanel.SetActive(false);
         DetailPanel.SetActive(false);
-    }
-
-    public void excuteClickExpButton()
-    {
-        TotalPanel.SetActive(true);
-        ChoosePanel.SetActive(true);
-        ThingsPanel.SetActive(false);
-        ExperiencePanel.SetActive(true);
-        DetailPanel.SetActive(false);
-    }
-
-    public void DisplayThingPanel()
-    {
-        excuteClickThingsButton();
 
         IsExitThings[0] = Package.xiaofu;
         IsExitThings[1] = Package.chizi;
@@ -133,18 +107,8 @@ public class ChangeBag : MonoBehaviour
         IsExitThings[7] = Package.yunduo;
         IsExitThings[8] = Package.huaxiangji;
 
-        IsExitThings[0] = 0;
-        IsExitThings[1] = 1;
-        IsExitThings[2] = 1;
-        IsExitThings[3] = 1;
-        IsExitThings[4] = 0;
-        IsExitThings[5] = 1;
-        IsExitThings[6] = 0;
-        IsExitThings[7] = 1;
-        IsExitThings[8] = 1;
 
-
-        for (int i = 0; i<9; ++i)
+        for (int i = 0; i<6; ++i)
         {
 
             if(IsExitThings[i] != 0)
@@ -160,14 +124,11 @@ public class ChangeBag : MonoBehaviour
 
     public void DisplayExpPanel()
     {
-        excuteClickExpButton();
-
-        IsExitCards[0] = 1;
-        IsExitCards[1] = 1;
-        IsExitCards[2] = 1;
-        IsExitCards[3] = 0;
-        IsExitCards[4] = 0;
-        IsExitCards[5] = 0;
+        TotalPanel.SetActive(true);
+        ChoosePanel.SetActive(true);
+        ThingsPanel.SetActive(false);
+        ExperiencePanel.SetActive(true);
+        DetailPanel.SetActive(false);
 
         for (int i = 0; i < 6; ++i)
         {
@@ -267,50 +228,12 @@ public class ChangeBag : MonoBehaviour
         }
     }
 
-    public void clickThingsButton6()
-    {
-        if (IsExitThings[6] == 0)
-        {
-            DetailPanel.SetActive(false);
-        }
-        else
-        {
-            DetailPanel.SetActive(true);
-            DetailText.text = "第7个按钮";
-
-        }
-    }
-
-    public void clickThingsButton7()
-    {
-        if (IsExitThings[7] == 0)
-        {
-            DetailPanel.SetActive(false);
-        }
-        else
-        {
-            DetailPanel.SetActive(true);
-            DetailText.text = "第8个按钮";
-
-        }
-    }
-
-    public void clickThingsButton8()
-    {
-        if (IsExitThings[8] == 0)
-        {
-            DetailPanel.SetActive(false);
-        }
-        else
-        {
-            DetailPanel.SetActive(true);
-            DetailText.text = "第9个按钮";
-
-        }
-    }
-
     public void clickExitDetailButton()
     {
+        TotalPanel.SetActive(true);
+        ChoosePanel.SetActive(true);
+        ThingsPanel.SetActive(true);
+        ExperiencePanel.SetActive(false);
         DetailPanel.SetActive(false);
     }
 }
