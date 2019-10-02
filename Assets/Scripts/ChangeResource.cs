@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ChangeResource : MonoBehaviour
 {
+
+
+
     public Image ImageSun;
     public Image ImageHuafei;
     public Image ImagePanel;

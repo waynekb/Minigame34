@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class ChangeBag : MonoBehaviour
 {
+    public GameObject TotalPanel;
+    public GameObject ChoosePanel;
+    public GameObject ThingsPanel;
+    public GameObject ExperiencePanel;
+    public GameObject DetailPanel;
+
     public Button OpenButton;
-    public Canvas ChooseCanvas;
-    public Canvas ThingsCanvas;
-    public Canvas ExpCanvas;
     public Button ThingsButton;
     public Button ExpButton;
     public Button ExitButton;
-
-    public Canvas ThingsDetailCanvas;
     public Button ExitDetailButton;
 
     public Button[] ThingsButtonSet = new Button[9];
@@ -28,10 +29,11 @@ public class ChangeBag : MonoBehaviour
 
     void Start()
     {
-        ChooseCanvas.enabled = false;
-        ThingsCanvas.enabled = false;
-        ExpCanvas.enabled = false;
-        ThingsDetailCanvas.enabled = false;
+        TotalPanel.SetActive(false);
+        ChoosePanel.SetActive(false);
+        ThingsPanel.SetActive(false);
+        ExperiencePanel.SetActive(false);
+        DetailPanel.SetActive(false);
 
         string[] FileName = new string[30];
         FileName[0] = "Things/beike";
@@ -81,36 +83,40 @@ public class ChangeBag : MonoBehaviour
 
     public void excuteClickOpenButton()
     {
-        ChooseCanvas.enabled = true;
-        ThingsCanvas.enabled = true;
-        ExpCanvas.enabled = false;
-        ThingsDetailCanvas.enabled = false;
+        TotalPanel.SetActive(true);
+        ChoosePanel.SetActive(true);
+        ThingsPanel.SetActive(true);
+        ExperiencePanel.SetActive(false);
+        DetailPanel.SetActive(false);
 
         DisplayThingPanel();
     }
 
     public void excuteClickExitButton()
     {
-        ChooseCanvas.enabled = false;
-        ThingsCanvas.enabled = false;
-        ExpCanvas.enabled = false;
-        ThingsDetailCanvas.enabled = false;
+        TotalPanel.SetActive(false);
+        ChoosePanel.SetActive(false);
+        ThingsPanel.SetActive(false);
+        ExperiencePanel.SetActive(false);
+        DetailPanel.SetActive(false);
     }
 
     public void excuteClickThingsButton()
     {
-        ChooseCanvas.enabled = true;
-        ThingsCanvas.enabled = true;
-        ExpCanvas.enabled = false;
-        ThingsDetailCanvas.enabled = false;
+        TotalPanel.SetActive(true);
+        ChoosePanel.SetActive(true);
+        ThingsPanel.SetActive(true);
+        ExperiencePanel.SetActive(false);
+        DetailPanel.SetActive(false);
     }
 
     public void excuteClickExpButton()
     {
-        ChooseCanvas.enabled = true;
-        ThingsCanvas.enabled = false;
-        ExpCanvas.enabled = true;
-        ThingsDetailCanvas.enabled = false;
+        TotalPanel.SetActive(true);
+        ChoosePanel.SetActive(true);
+        ThingsPanel.SetActive(false);
+        ExperiencePanel.SetActive(true);
+        DetailPanel.SetActive(false);
     }
 
     public void DisplayThingPanel()
@@ -181,11 +187,11 @@ public class ChangeBag : MonoBehaviour
     {
         if(IsExitThings[0] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "普通的贝壳，拿起来轻飘飘的。\n砂砾在里面会变成珍珠。\n但也仅仅是普普通通的珍珠而已。";
 
         }
@@ -195,11 +201,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[1] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "用来量尺寸是否标准的尺子。\n和外表一样循规蹈矩。\n是否暗示着有标准规则的未来？";
 
         }
@@ -209,11 +215,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[2] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "一把精美的吉他。\n能够演奏出无限可能的音乐。\n任意风格、流派都OK。";
 
         }
@@ -223,11 +229,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[3] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "凑近能闻到难闻气味的海洋垃圾。\n最好不要碰到，但如果你看到这行字。\n说明前路已经开始发生改变。";
 
         }
@@ -237,11 +243,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[4] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "不像是应该出现在这里的东西。\n味道也并不好闻。\n一旦尝试可能会被改变命运。";
 
         }
@@ -251,11 +257,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[5] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "一朵会唱歌的云。\n这不荒唐——因为它也有不想被定义的梦想。\n在触碰的一瞬间，音乐的魅力在此被领悟。";
 
         }
@@ -265,11 +271,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[6] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "第7个按钮";
 
         }
@@ -279,11 +285,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[7] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "第8个按钮";
 
         }
@@ -293,11 +299,11 @@ public class ChangeBag : MonoBehaviour
     {
         if (IsExitThings[8] == 0)
         {
-            ThingsDetailCanvas.enabled = false;
+            DetailPanel.SetActive(false);
         }
         else
         {
-            ThingsDetailCanvas.enabled = true;
+            DetailPanel.SetActive(true);
             DetailText.text = "第9个按钮";
 
         }
@@ -305,6 +311,6 @@ public class ChangeBag : MonoBehaviour
 
     public void clickExitDetailButton()
     {
-        ThingsDetailCanvas.enabled = false;
+        DetailPanel.SetActive(false);
     }
 }
