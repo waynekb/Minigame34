@@ -107,13 +107,15 @@ public class ChangeBag : MonoBehaviour
         IsExitThings[7] = Package.yunduo;
         IsExitThings[8] = Package.huaxiangji;
 
+        IsExitThings[0] = 1;
+
 
         for (int i = 0; i<6; ++i)
         {
 
             if(IsExitThings[i] != 0)
             {
-                ThingsButtonSet[i].GetComponent<Image>().sprite = ImageSpritSet[2*i + 1];
+                ThingsButtonSet[i].GetComponent<Image>().sprite = ImageSpritSet[2*i];
             }
             else
             {
