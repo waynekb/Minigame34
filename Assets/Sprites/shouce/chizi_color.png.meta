@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c45437b84ec49a74bb4997887744aa56
+guid: 39bd2796f760d4e658be7c2858f4c147
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6396767788579498735
-    second: yunduo_color_0
+      213: 350871351605140426
+    second: chizi_color_0
   - first:
-      213: -5109172985160546900
-    second: yunduo_color_1
+      213: 7949108199385973775
+    second: chizi_color_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yunduo_color_0
+      name: chizi_color_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 47
-        width: 463
-        height: 278
+        x: 8
+        y: 9
+        width: 110
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,29 +115,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2939c3aecc93e41b48cfc37bf520c0d3
-      internalID: -6396767788579498735
+      spriteID: 43aadbc6e6f7b4bf1a690ed1951a6a0a
+      internalID: 350871351605140426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yunduo_color_1
+      name: chizi_color_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 38
-        width: 470
-        height: 288
+        x: 6
+        y: 6
+        width: 114
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 6, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eae57ad341d8541a79dbe9738f79f384
-      internalID: -5109172985160546900
+      spriteID: 85c8d348c22c24c37acf719ea50aad4c
+      internalID: 7949108199385973775
       vertices: []
       indices: 
       edges: []
@@ -145,7 +145,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b7087ca75a24b5141924767c65299f6e
+    spriteID: c12cad9c8e7e04e80b013d29ce20b571
     internalID: 0
     vertices: []
     indices: 

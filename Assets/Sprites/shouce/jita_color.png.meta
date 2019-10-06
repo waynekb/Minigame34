@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c45437b84ec49a74bb4997887744aa56
+guid: a7368815857e84039a18fed4223a58e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6396767788579498735
-    second: yunduo_color_0
+      213: 8872350488758844777
+    second: jita_color_0
   - first:
-      213: -5109172985160546900
-    second: yunduo_color_1
+      213: 2213595404327618029
+    second: jita_color_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: yunduo_color_0
+      name: jita_color_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 47
-        width: 463
-        height: 278
+        x: 229
+        y: 214
+        width: 98
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,29 +115,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2939c3aecc93e41b48cfc37bf520c0d3
-      internalID: -6396767788579498735
+      spriteID: 4377b309a80114c7a8de3eda09c9a838
+      internalID: 8872350488758844777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: yunduo_color_1
+      name: jita_color_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 38
-        width: 470
-        height: 288
+        x: 224
+        y: 207
+        width: 108
+        height: 147
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 6, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eae57ad341d8541a79dbe9738f79f384
-      internalID: -5109172985160546900
+      spriteID: 435eb6fa772f3466390c2d63cf45a377
+      internalID: 2213595404327618029
       vertices: []
       indices: 
       edges: []
@@ -145,7 +145,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b7087ca75a24b5141924767c65299f6e
+    spriteID: 045a7a34530614c6ca0413e6d37d10dd
     internalID: 0
     vertices: []
     indices: 

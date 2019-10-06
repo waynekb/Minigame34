@@ -43,6 +43,7 @@ public class handbook : MonoBehaviour
                 default:
                     break;
             }
+            Destroy(gameObject);
             Package.Save_data();
         }
     }

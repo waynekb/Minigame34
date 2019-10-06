@@ -58,4 +58,17 @@ public class SheXiangGenSui : MonoBehaviour
 
         transform.position = position;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            print(Package.beike);
+            print(Package.chizi);
+            print(Package.haiyanglaji);
+            print(Package.xiangyantou);
+            print(Package.yueqi);
+            print(Package.yunduo);
+        }
+    }
 }
