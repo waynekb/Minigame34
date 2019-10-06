@@ -64,8 +64,8 @@ public class ChangeScene : MonoBehaviour
                 }
                 break;
             case "Sixth":
-                PassSceneName.SceneName = "Start";
-                break;
+                SceneManager.LoadScene("Start");
+                return;
             default:
                 break;
         }

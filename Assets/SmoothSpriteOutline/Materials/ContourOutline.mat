@@ -88,4 +88,4 @@ Material:
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 1, b: 0.42534637, a: 1}
     - _PivotCorrection: {r: 0, g: 0, b: 0, a: 0}
-    - _SpriteUVs: {r: 0.12743938, g: 0.0908347, b: 0.13971023, a: 0.15957446}
+    - _SpriteUVs: {r: 0.07879952, g: 0.03927987, b: 0.11295091, a: 0.35679215}
