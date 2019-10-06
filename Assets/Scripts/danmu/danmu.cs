@@ -7,15 +7,22 @@ public class danmu : MonoBehaviour
 {
     // Start is called before the first frame update
     private SpriteRenderer render;
+    private BoxCollider2D boxclolider;
     public Sprite[] sp2;
     public Sprite[] sp3;
     public Sprite[] sp4;
     public Sprite[] sp5;
-
+    public Sprite[] sp6;
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
+        boxclolider = GetComponent<BoxCollider2D>();
         change_sprite();
+        float len=render.sprite.bounds.size.x;
+        float heigh = render.sprite.bounds.size.y;
+        boxclolider.size =new Vector2(len, heigh);
+        print(len);
+        print(heigh);
     }
 
     void change_sprite()
@@ -42,6 +49,10 @@ public class danmu : MonoBehaviour
             case "Fifth":
                 num = Random.Range(0, sp5.Length-1);
                 render.sprite = sp5[num];
+                break;
+            case "Sixth":
+                num = Random.Range(0, sp6.Length - 1);
+                render.sprite = sp6[num];
                 break;
             default:
                 break;
