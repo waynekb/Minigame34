@@ -18,17 +18,11 @@ public class ChangeScene : MonoBehaviour
         {
             case "First":
                 PassSceneName.SceneName = "Second";
-                if (Level.level < 1)
-                {
-                    Level.level = 1;
-                }
+                Level.level0 = 1;
                 break;
             case "Second":
                 PassSceneName.SceneName = "Third_1";
-                if (Level.level < 2)
-                {
-                    Level.level = 2;
-                }
+                Level.level1 = 1;
                 break;
             case "Third_1":
                 PassSceneName.SceneName = "TuZi";
@@ -38,30 +32,24 @@ public class ChangeScene : MonoBehaviour
                 break;
             case "Niu_Dan":
                 PassSceneName.SceneName = "Fourth";
-                if (Level.level < 3)
-                {
-                    Level.level = 3;
-                }
+                Level.level2 = 1;
+
                 break;
             case "Fourth":
                 PassSceneName.SceneName = "Third_2";
                 break;
             case "Third_2":
                 PassSceneName.SceneName = "JinRu";
-                if (Level.level < 4)
-                {
-                    Level.level = 4;
-                }
+                Level.level3 = 1;
+
                 break;
             case "JinRu":
                 PassSceneName.SceneName = "Fifth";
                 break;
             case "Fifth":
                 PassSceneName.SceneName = "Sixth";
-                if (Level.level < 5)
-                {
-                    Level.level = 5;
-                }
+                Level.level4 = 1;
+
                 break;
             case "Sixth":
                 PassSceneName.SceneName = "Start";

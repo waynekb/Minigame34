@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class ChangeResource : MonoBehaviour
 {
-
-
-
     public Image ImageSun;
     public Image ImageHuafei;
     public Image ImagePanel;
@@ -71,6 +68,8 @@ public class ChangeResource : MonoBehaviour
         SunNum = pickups.lifeNum;
         HuafeiNum = pickups.respawnNum;
         PlaneNum = pickups.platformNum;
+
+
         UpdateResourceImage();
         UpdateResourceText();
     }
@@ -97,7 +96,7 @@ public class ChangeResource : MonoBehaviour
         {
             ImageHuafei.GetComponent<Image>().sprite = ResourcesSpriteSet[3];
         }
-        else if (RemainSunNumn == 1)
+        else if (RemainHuafeiNum == 1)
         {
             ImageHuafei.GetComponent<Image>().sprite = ResourcesSpriteSet[4];
         }

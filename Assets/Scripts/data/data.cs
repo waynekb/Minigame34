@@ -67,19 +67,35 @@ public class Package
 
 public class Level
 {
-    public static int level;
+    public static int level0;
+    public static int level1;
+    public static int level2;
+    public static int level3;
+    public static int level4;
     public static void Init_level()
     {
-        level = 0;
+        level0 = 0;
+        level1 = 0;
+        level2 = 0;
+        level3 = 0;
+        level4 = 0;
     }
 
     public static void Save_level()
     {
-        PlayerPrefs.SetInt("level", level);
+        PlayerPrefs.SetInt("level0", level0);
+        PlayerPrefs.SetInt("level1", level1);
+        PlayerPrefs.SetInt("level2", level2);
+        PlayerPrefs.SetInt("level3", level3);
+        PlayerPrefs.SetInt("level4", level4);
     }
     public static void Load_level()
     {
-        level = PlayerPrefs.GetInt("level");
+        level0 = PlayerPrefs.GetInt("level0");
+        level1 = PlayerPrefs.GetInt("level1");
+        level2 = PlayerPrefs.GetInt("level2");
+        level3 = PlayerPrefs.GetInt("level3");
+        level4 = PlayerPrefs.GetInt("level4");
     }
 }
 

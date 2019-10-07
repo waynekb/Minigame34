@@ -110,10 +110,6 @@ public class ChangeBag : MonoBehaviour
         IsExitThings[4] = Package.xiangyantou;
         IsExitThings[5] = Package.yunduo;
 
-        for (int i = 0; i<6; ++i)
-        {
-            IsExitThings[i] = 2;
-        }
 
         for (int i = 0; i<6; ++i)
         {
@@ -121,16 +117,15 @@ public class ChangeBag : MonoBehaviour
             if(IsExitThings[i] != 0)
             {
                 ThingsButtonSet[i].GetComponent<Image>().sprite = ImageSpritSet[2*i + 1];
-                ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[12 + i];
 
             }
             else
             {
                 ThingsButtonSet[i].GetComponent<Image>().sprite = ImageSpritSet[2 * i];
-                ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[18];
             }
         }
 
+        ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[18];
     }
 
     public void DisplayExpPanel()
@@ -140,6 +135,13 @@ public class ChangeBag : MonoBehaviour
         ThingsPanel.SetActive(false);
         ThingsDetailPanel.SetActive(false);
         ExperiencePanel.SetActive(true);
+
+        IsExitCards[0] = Level.level0;
+        IsExitCards[1] = Level.level1;
+        IsExitCards[2] = Level.level2;
+        IsExitCards[3] = Level.level3;
+        IsExitCards[4] = Level.level4;
+
 
         for (int i = 0; i < 6; ++i)
         {
@@ -169,7 +171,7 @@ public class ChangeBag : MonoBehaviour
 
     public void clickThingsButton1()
     {
-        if (IsExitThings[0] == 0)
+        if (IsExitThings[1] == 0)
         {
             ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[18];
         }
@@ -181,7 +183,7 @@ public class ChangeBag : MonoBehaviour
 
     public void clickThingsButton2()
     {
-        if (IsExitThings[0] == 0)
+        if (IsExitThings[2] == 0)
         {
             ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[18];
         }
@@ -193,7 +195,7 @@ public class ChangeBag : MonoBehaviour
 
     public void clickThingsButton3()
     {
-        if (IsExitThings[0] == 0)
+        if (IsExitThings[3] == 0)
         {
             ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[18];
         }
@@ -205,7 +207,7 @@ public class ChangeBag : MonoBehaviour
 
     public void clickThingsButton4()
     {
-        if (IsExitThings[0] == 0)
+        if (IsExitThings[4] == 0)
         {
             ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[18];
         }
@@ -217,7 +219,7 @@ public class ChangeBag : MonoBehaviour
 
     public void clickThingsButton5()
     {
-        if (IsExitThings[0] == 0)
+        if (IsExitThings[5] == 0)
         {
             ThingsDetailPanel.GetComponent<Image>().sprite = ImageSpritSet[18];
         }
