@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
     private float respawnTime = 0.2f;
 
     private int life = 1;
-
+    public bool bJoystick = false;
     private void Awake()
     {
         Gravity = new Vector2(0.0f, -GravityMagnitude);
@@ -88,6 +88,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Init();
+        pickups.platformNum = initPickups.platformNum;
+        lastPlatform = transform.position;
         hero = gameObject.GetComponent<Animator>();
     }
 
@@ -111,13 +113,13 @@ public class PlayerController : MonoBehaviour
         Rigidbody2D rigid = gameObject.GetComponent<Rigidbody2D>();
         if (rigid && rigid.velocity.sqrMagnitude > MaxVelocity*MaxVelocity)
         {
-            rigid.velocity = rigid.velocity * rigid.velocity.magnitude / MaxVelocity;
+            rigid.velocity = MaxVelocity/ rigid.velocity.magnitude * rigid.velocity;
         }
     }
 
     private void CheckInput()
     {
-        if (IsOverUI() || IsEnergyOver() || bIsDead)
+        if (bJoystick || IsOverUI() || IsEnergyOver() || bIsDead)
         {
             return;
         }
@@ -312,6 +314,11 @@ public class PlayerController : MonoBehaviour
 
         if (bRespawnPlatform)
         {
+            pickups.respawnNum -= skillThreshold.respawnNum;
+            if(pickups.respawnNum < skillThreshold.respawnNum)
+            {
+                bRespawnPlatform = false;
+            }
             StartCoroutine(Respawn());
         }
         else
@@ -324,7 +331,8 @@ public class PlayerController : MonoBehaviour
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(respawnTime);
-        transform.position = respawnPlatform;
+        //transform.position = respawnPlatform;
+        transform.position = lastPlatform;
         
         Init();
     }
@@ -334,11 +342,11 @@ public class PlayerController : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         bIsDead = false;
 
-        Energy = maxEnergy;
-        pickups.energyNum = initPickups.energyNum;
-        pickups.lifeNum = initPickups.lifeNum;
-        pickups.platformNum = initPickups.platformNum;
-        pickups.respawnNum = initPickups.respawnNum;
+        //Energy = maxEnergy;
+        //pickups.energyNum = initPickups.energyNum;
+        //pickups.lifeNum = initPickups.lifeNum;
+        //pickups.platformNum = initPickups.platformNum;
+        //pickups.respawnNum = initPickups.respawnNum;
     }
 
     public void AddEnergyNum(int num)
@@ -408,7 +416,7 @@ public class PlayerController : MonoBehaviour
 
     private void SkillRespawn()
     {
-        respawnPlatform = lastPlatform;
+        //respawnPlatform = lastPlatform;
         bRespawnPlatform = true;
     }
 

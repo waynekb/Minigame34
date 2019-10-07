@@ -32,11 +32,25 @@ public class SpawnByReleaseJoystic : MonoBehaviour
     private void DragEvent()
     {
         GameAudios.PlaySfx(gameObject, GameAudios.dragPlatformSfx);
+        if (pc)
+        {
+            pc.bJoystick = true;
+        }
     }
 
     private void SpawnPlatform(Vector3 direction)
     {
-        if(!pc.CanSpawnPlatform())
+        GameAudios.StopSfx(gameObject);
+
+        if (pc)
+        {
+            pc.bJoystick = false;
+        }
+        else
+        {
+            return;
+        }
+        if (!pc.CanSpawnPlatform())
         {
             return;
         }
