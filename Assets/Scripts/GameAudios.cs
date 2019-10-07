@@ -51,4 +51,12 @@ public class GameAudios : MonoBehaviour
         }
         audioComp.volume = volume;
     }
+
+    public static void StopSfx(GameObject obj)
+    {
+        if(audioComp != null)
+        {
+            audioComp.Stop();
+        }
+    }
 }

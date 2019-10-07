@@ -24,7 +24,7 @@ public class ShowJoystick : MonoBehaviour
             bShowJoystick = true;
 
             PlayerController pc = collision.collider.GetComponent<PlayerController>();
-            if (pc && collision.collider.tag == "Platform")
+            if (pc && gameObject.tag == "Platform")
             {
                 pc.SetLastPlatform(collision.collider.transform.position);
             }

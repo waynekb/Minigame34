@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8542111307308562175}
   m_Layer: 0
   m_Name: "\u53F6\u5B50_2"
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1830463563
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1561432549994077420, guid: 50315ffdfdbdb724ab7f65fd1eda4f8f,
     type: 3}
