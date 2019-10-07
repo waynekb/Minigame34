@@ -18,11 +18,9 @@ public class danmu : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         boxclolider = GetComponent<BoxCollider2D>();
         change_sprite();
-        float len=render.sprite.bounds.size.x;
-        float heigh = render.sprite.bounds.size.y;
-        boxclolider.size =new Vector2(len, heigh);
-        print(len);
-        print(heigh);
+        gameObject.transform.localScale = new Vector3(0.05f, 0.05f, 0);
+        print(boxclolider.size.x);
+        print(boxclolider.size.y);
     }
 
     void change_sprite()
@@ -38,15 +36,18 @@ public class danmu : MonoBehaviour
                 render.sprite = sp2[num];
                 break;
             case "Third_1":
-            case "Third_2":
+            case "TuZi":
+            case "Niu_Dan":
                 num = Random.Range(0, sp3.Length-1);
                 render.sprite = sp3[num];
                 break;
             case "Fourth":
+            case "Third_2":
                 num = Random.Range(0, sp4.Length-1);
                 render.sprite = sp4[num];
                 break;
             case "Fifth":
+            case "JinRu":
                 num = Random.Range(0, sp5.Length-1);
                 render.sprite = sp5[num];
                 break;
