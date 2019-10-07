@@ -3363,8 +3363,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610046424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.24, y: 0.43, z: 64.16797}
-  m_LocalScale: {x: 0.681, y: 0.681, z: 0.681}
+  m_LocalPosition: {x: 31.07, y: 0.71, z: 64.16797}
+  m_LocalScale: {x: 0.88636404, y: 0.9116887, z: 0.681}
   m_Children: []
   m_Father: {fileID: 1049090495}
   m_RootOrder: 0
@@ -6337,6 +6337,36 @@ RectTransform:
   m_AnchoredPosition: {x: 24, y: 0.000015258789}
   m_SizeDelta: {x: -73.4, y: -28.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1087497446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087497447}
+  m_Layer: 0
+  m_Name: BarrageSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087497447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087497446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.17, y: -2.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1125938087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6497,12 +6527,13 @@ MonoBehaviour:
   spawnTimeInternal: 5
   barrages:
   - {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14, type: 3}
-  barrageSpawnPoint: {fileID: 0}
-  barrageBoundargy: {x: -5, y: 5}
+  barrageSpawnPoint: {fileID: 1087497447}
+  barrageBoundargy: {x: 0, y: 4}
   barrageStartTimeInternal: 1
-  barrageSpawnTimeInternal: 1
-  barrageWaveTimeInternal: 1
-  barrageCountPerWave: 10
+  barrageSpawnTimeInternal: 3
+  barrageWaveTimeInternal: 3
+  barrageCountPerWave: 2
+  fontSize: 0.2
   restartDelayTime: 1
 --- !u!4 &1135857328
 Transform:

@@ -120,6 +120,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8122269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8122270}
+  m_Layer: 0
+  m_Name: BarrageSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8122270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8122269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.96, y: -2.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &15384932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,12 +3132,13 @@ MonoBehaviour:
   spawnTimeInternal: 5
   barrages:
   - {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14, type: 3}
-  barrageSpawnPoint: {fileID: 0}
-  barrageBoundargy: {x: -5, y: 5}
+  barrageSpawnPoint: {fileID: 8122270}
+  barrageBoundargy: {x: 0, y: 4}
   barrageStartTimeInternal: 1
-  barrageSpawnTimeInternal: 1
-  barrageWaveTimeInternal: 1
-  barrageCountPerWave: 10
+  barrageSpawnTimeInternal: 3
+  barrageWaveTimeInternal: 3
+  barrageCountPerWave: 2
+  fontSize: 0.7
   restartDelayTime: 1
 --- !u!4 &521999407
 Transform:
@@ -3117,7 +3148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521999404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.18, y: -2.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3205,6 +3236,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 222089369770595639, guid: 6669c38496c874e29b667fc0ff0ea159,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 222089369770595624, guid: 6669c38496c874e29b667fc0ff0ea159,
         type: 3}
       propertyPath: m_Offset.x
@@ -3214,11 +3250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.36670768
-      objectReference: {fileID: 0}
-    - target: {fileID: 222089369770595639, guid: 6669c38496c874e29b667fc0ff0ea159,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6669c38496c874e29b667fc0ff0ea159, type: 3}
@@ -10167,8 +10198,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023682258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.29, y: 0.98, z: 64.16797}
-  m_LocalScale: {x: 0.587, y: 0.587, z: 0.587}
+  m_LocalPosition: {x: 5.45, y: 1.4, z: 64.16797}
+  m_LocalScale: {x: 0.8793674, y: 0.8793674, z: 0.8793674}
   m_Children: []
   m_Father: {fileID: 1769643035}
   m_RootOrder: 0

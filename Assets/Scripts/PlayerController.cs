@@ -79,6 +79,8 @@ public class PlayerController : MonoBehaviour
 
     private int life = 1;
     public bool bJoystick = false;
+
+    private Rigidbody2D rigid = null;
     private void Awake()
     {
         Gravity = new Vector2(0.0f, -GravityMagnitude);
@@ -91,6 +93,8 @@ public class PlayerController : MonoBehaviour
         pickups.platformNum = initPickups.platformNum;
         lastPlatform = transform.position;
         hero = gameObject.GetComponent<Animator>();
+
+        rigid = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -263,14 +267,14 @@ public class PlayerController : MonoBehaviour
 
     private void AddInputForce()
     {
-        if (LeftInput)
+        if (LeftInput && rigid)
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(LeftForce * LeftForceDirection.normalized);
+            rigid.AddForce(LeftForce * LeftForceDirection.normalized);
             LeftInput = false;
             AddEnergy(-ConsumeRate);
         }
 
-        if (RightInput)
+        if (RightInput && rigid)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(RightForce * RightForceDirection.normalized);
             RightInput = false;
@@ -280,9 +284,14 @@ public class PlayerController : MonoBehaviour
 
     private void AddOtherForce()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddForce(Gravity);
+        if(rigid == null)
+        {
+            return;
+        }
 
-        gameObject.GetComponent<Rigidbody2D>().AddForce(AirResistance);
+        rigid.AddForce(Gravity);
+
+        rigid.AddForce(AirResistance);
     }
 
     private float ResistanceFormula(float speed)

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2206980558068347426}
   - component: {fileID: 2206980558068347428}
   - component: {fileID: 2206980558068347427}
+  - component: {fileID: 7026402825760762717}
   m_Layer: 0
   m_Name: "\u9C7C_41"
   m_TagString: Platform
@@ -66,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -705138539
-  m_SortingLayer: 0
+  m_SortingLayerID: 1264121553
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -628670376288801675, guid: 126da91205e3b8c4b86951945bf70738,
     type: 3}
@@ -145,3 +146,18 @@ PolygonCollider2D:
       - {x: 0.315, y: -0.26999998}
       - {x: 0.5215817, y: -0.2104831}
       - {x: 0.7142638, y: -0.16121632}
+--- !u!114 &7026402825760762717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206980558068347425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db71eeaa1abb5484e91a7f3b5e8b6e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 2, y: 0, z: 0}
+  gravity: {x: 0, y: -2, z: 0}
+  mass: 1

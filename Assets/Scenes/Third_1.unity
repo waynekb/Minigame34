@@ -8033,6 +8033,7 @@ MonoBehaviour:
   dragPlatform: {fileID: 8300000, guid: e76bca664532f6f4c95217a6f97308a1, type: 3}
   releasePlatform: {fileID: 8300000, guid: 89de5dc22b194a845a3047433ef8a003, type: 3}
   landFailure: {fileID: 8300000, guid: cd5c0e71e11ed024eac4a23d73da6d7d, type: 3}
+  fire: {fileID: 0}
 --- !u!114 &1608952891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8052,12 +8053,13 @@ MonoBehaviour:
   spawnTimeInternal: 5
   barrages:
   - {fileID: 4434377274900535375, guid: 454fa41681fbb4b75bd72495de54fc14, type: 3}
-  barrageSpawnPoint: {fileID: 0}
-  barrageBoundargy: {x: -5, y: 5}
+  barrageSpawnPoint: {fileID: 1705654320}
+  barrageBoundargy: {x: 0, y: 5}
   barrageStartTimeInternal: 1
-  barrageSpawnTimeInternal: 1
-  barrageWaveTimeInternal: 1
-  barrageCountPerWave: 10
+  barrageSpawnTimeInternal: 3
+  barrageWaveTimeInternal: 3
+  barrageCountPerWave: 2
+  fontSize: 0.8
   restartDelayTime: 1
 --- !u!4 &1608952892
 Transform:
@@ -9258,6 +9260,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1705654319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705654320}
+  m_Layer: 0
+  m_Name: BarrageSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1705654320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705654319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.16, y: 12.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1740060474
 GameObject:
   m_ObjectHideFlags: 0
@@ -9509,7 +9541,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774749580}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 2318357f519c4aa44b96eef63d31fba4, type: 2}
   m_IsTrigger: 0
@@ -9541,8 +9573,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 653442054}
-  lerpSpeed: {x: 200, y: 200, z: 0}
-  activeDist: {x: 1, y: 1, z: 0}
+  isUp: 0
+  outerBoundary:
+    min: {x: -6.6, y: 0}
+    max: {x: 5, y: 15}
+  activeDist:
+    min: {x: -1, y: 1}
+    max: {x: -1, y: 1}
+  lerpSpeed: 1
+  xChangePoint: 4
+  xChangePoint2: 5.2
+  xSize: 3.7
+  ySize: 3
+  deltaX: 0.1
 --- !u!114 &1774749584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9567,7 +9610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff7958665c2883498dd1019160b208d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 653442054}
   outerBoundary:
     min: {x: -6, y: 0}
     max: {x: 5, y: 15}
@@ -9611,7 +9654,7 @@ Camera:
   far clip plane: 1000
   field of view: 88
   orthographic: 1
-  orthographic size: 2.4651313
+  orthographic size: 3.8033867
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9635,7 +9678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774749580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.73, y: -0.09, z: -10}
+  m_LocalPosition: {x: -6.38, y: -0.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10033,6 +10076,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4501233674149544258, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7806237442604007278, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -10078,11 +10126,6 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1875766461}
-    - target: {fileID: 4501233674149544258, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7806237442630410651, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
       propertyPath: m_LocalPosition.x

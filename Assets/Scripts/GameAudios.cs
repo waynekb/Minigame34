@@ -11,6 +11,7 @@ public class GameAudios : MonoBehaviour
     public AudioClip dragPlatform = null;
     public AudioClip releasePlatform = null;
     public AudioClip landFailure = null;
+    public AudioClip fire = null;
 
     private static AudioSource audioComp = null;
     public static AudioClip jumpSfx = null;
@@ -19,6 +20,7 @@ public class GameAudios : MonoBehaviour
     public static AudioClip dragPlatformSfx = null;
     public static AudioClip releasePlatformSfx = null;
     public static AudioClip landDeadSfx = null;
+    public static AudioClip fireSfx = null;
 
     public void Awake()
     {
@@ -28,6 +30,7 @@ public class GameAudios : MonoBehaviour
         dragPlatformSfx = dragPlatform;
         releasePlatformSfx = releasePlatform;
         landDeadSfx = landFailure;
+        fireSfx = fire;
     }
 
     public static void PlaySfx(GameObject obj, AudioClip audioClip)

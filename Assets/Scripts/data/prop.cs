@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class prop : MonoBehaviour
 {
-    public int abc;
+    public int energy = 20;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.name == "hero")
@@ -21,7 +21,8 @@ public class prop : MonoBehaviour
                     break;
                 case "水分":
                     print("shuifen");
-                    GameObject.Find("hero").GetComponent<PlayerController>().AddEnergyNum(1);
+                    //GameObject.Find("hero").GetComponent<PlayerController>().AddEnergyNum(1);
+                    GameObject.Find("hero").GetComponent<PlayerController>().AddEnergy(energy);
                     break;
                 case "肥料":
                     print("yangfen");

@@ -11,6 +11,7 @@ public class danmu : MonoBehaviour
     public Sprite[] sp3;
     public Sprite[] sp4;
     public Sprite[] sp5;
+    public Sprite[] sp6;
     private float len;
     private float heigh;
     private BoxCollider2D boxCollider;
@@ -18,11 +19,16 @@ public class danmu : MonoBehaviour
     {
         render = GetComponent<SpriteRenderer>();
         change_sprite();
-        gameObject.transform.localScale = new Vector3(0.4f, 0.4f, 0f);
+        float fontSize = GameController.Get().fontSize;
+        gameObject.transform.localScale = new Vector3(fontSize, fontSize, 0f);
         len = render.sprite.bounds.size.x;
         heigh = render.sprite.bounds.size.y;
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         boxCollider.size = new Vector2(len, heigh);
+
+        Vector2 position = transform.position;
+        position.x -= transform.localScale.x * len / 2;
+        transform.position = position;
     }
 
     void change_sprite()
@@ -44,7 +50,6 @@ public class danmu : MonoBehaviour
                 render.sprite = sp3[num];
                 break;
             case "Fourth":
-            case "Third_2":
                 num = Random.Range(0, sp4.Length-1);
                 render.sprite = sp4[num];
                 break;
@@ -52,6 +57,10 @@ public class danmu : MonoBehaviour
             case "Fifth":
                 num = Random.Range(0, sp5.Length-1);
                 render.sprite = sp5[num];
+                break;
+            case "Third_2":
+                num = Random.Range(0, sp6.Length - 1);
+                render.sprite = sp6[num];
                 break;
             default:
                 break;

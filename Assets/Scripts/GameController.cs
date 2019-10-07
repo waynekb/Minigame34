@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public float barrageSpawnTimeInternal = 1.0f;
     public float barrageWaveTimeInternal = 1.0f;
     public float barrageCountPerWave = 10;
+    public float fontSize = 0.08f;
 
     public float restartDelayTime = 1.0f;
 
@@ -96,8 +97,8 @@ public class GameController : MonoBehaviour
                 {
                     continue;
                 }
-                Transform barrage = Instantiate(barrageSpawnObj, barrageSpawnPoint);
-                Vector3 position = barrage.position;
+                Transform barrage = Instantiate(barrageSpawnObj, transform);
+                Vector3 position = barrageSpawnPoint.position;
                 position.y += Random.Range(barrageBoundargy.x, barrageBoundargy.y);
                 barrage.position = position;
                 yield return new WaitForSeconds(barrageSpawnTimeInternal);
