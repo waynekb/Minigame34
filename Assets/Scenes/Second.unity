@@ -167,7 +167,7 @@ MonoBehaviour:
   AirResistanceSquareRate: 0
   Gravity: {x: 0, y: 0}
   Energy: 100
-  ConsumeRate: 0
+  ConsumeRate: 0.1
   IsAddForceByClick: 0
   bUseForce: 1
   eventSystem: {fileID: 510187228}
@@ -218,7 +218,7 @@ MonoBehaviour:
     type: 3}
   spawnDist: 1
   spawnSpeedRate: 0.1
-  mass: 1
+  mass: 0.5
 --- !u!61 &18576115
 BoxCollider2D:
   m_ObjectHideFlags: 0
