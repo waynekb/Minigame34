@@ -40,8 +40,8 @@ public class CameraController : MonoBehaviour
             float size = Mathf.Lerp(xCamera.orthographicSize, ySize, Time.deltaTime * lerpSpeed);
             position.x = Mathf.Lerp(transform.position.x, xChangePoint2+deltaX, Time.deltaTime * lerpSpeed);
             xCamera.orthographicSize = size;
-            transform.position = position;
-            return;
+            //transform.position = position;
+            //return;
         }
 
         if (!isUp && (delta.x > activeDist.max.x || delta.x < activeDist.min.x))

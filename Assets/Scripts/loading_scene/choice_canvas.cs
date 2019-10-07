@@ -12,6 +12,7 @@ public class choice_canvas : MonoBehaviour
     public Button fourth_sce;
     public Button fifth_sce;
     public Button sixth_sce;
+    //public Button back;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +21,16 @@ public class choice_canvas : MonoBehaviour
         third_sce.onClick.AddListener(thirdsce);
         fourth_sce.onClick.AddListener(fourthsce);
         fifth_sce.onClick.AddListener(fifthsce);
-        sixth_sce.onClick.AddListener(sixthfirstsce);
-
+        if (sixth_sce)
+        {
+            sixth_sce.onClick.AddListener(sixthsce);
+        }
+        //back.onClick.AddListener(backsce);
     }
-
+    void backsce()
+    {
+        SceneManager.LoadScene("Start");
+    }
     void firstsce()
     {
         PassSceneName.SceneName = "First";
@@ -54,9 +61,8 @@ public class choice_canvas : MonoBehaviour
         SceneManager.LoadScene("loading_sce");
     }
 
-    void sixthfirstsce()
+    void sixthsce()
     {
-        PassSceneName.SceneName = "Sixth";
-        SceneManager.LoadScene("loading_sce");
+        SceneManager.LoadScene("Start");
     }
 }

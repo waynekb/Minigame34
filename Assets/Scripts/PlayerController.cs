@@ -81,6 +81,8 @@ public class PlayerController : MonoBehaviour
     public bool bJoystick = false;
 
     private Rigidbody2D rigid = null;
+
+    public float delayDeadTime = 1.0f;
     private void Awake()
     {
         Gravity = new Vector2(0.0f, -GravityMagnitude);
@@ -123,7 +125,13 @@ public class PlayerController : MonoBehaviour
 
     private void CheckInput()
     {
-        if (bJoystick || IsOverUI() || IsEnergyOver() || bIsDead)
+        if (IsEnergyOver())
+        {
+            StartCoroutine(DelayDead());
+            return;
+        }
+
+        if (bJoystick || IsOverUI() || bIsDead)
         {
             return;
         }
@@ -351,11 +359,21 @@ public class PlayerController : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         bIsDead = false;
 
-        //Energy = maxEnergy;
+        Energy = maxEnergy;
         //pickups.energyNum = initPickups.energyNum;
         //pickups.lifeNum = initPickups.lifeNum;
         //pickups.platformNum = initPickups.platformNum;
         //pickups.respawnNum = initPickups.respawnNum;
+    }
+
+    IEnumerator DelayDead()
+    {
+        yield return new WaitForSeconds(delayDeadTime);
+
+        if (IsEnergyOver())
+        {
+            OnDead();
+        }
     }
 
     public void AddEnergyNum(int num)
