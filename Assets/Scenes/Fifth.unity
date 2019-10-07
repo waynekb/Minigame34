@@ -2542,7 +2542,7 @@ MonoBehaviour:
   AirResistanceSquareRate: 0
   Gravity: {x: 0, y: 0}
   Energy: 100
-  ConsumeRate: 0
+  ConsumeRate: 0.1
   IsAddForceByClick: 0
   bUseForce: 1
   eventSystem: {fileID: 246141472}
@@ -2593,7 +2593,7 @@ MonoBehaviour:
     type: 3}
   spawnDist: 1
   spawnSpeedRate: 0.1
-  mass: 1
+  mass: 0.5
 --- !u!61 &476969529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6139,11 +6139,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4501233674149544258, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7806237442604007278, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -6189,6 +6184,11 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 696886932}
+    - target: {fileID: 4501233674149544258, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7806237442630410651, guid: 775de0a21bb2f2042a5cf4a5ef73eeb7,
         type: 3}
       propertyPath: m_LocalPosition.x
