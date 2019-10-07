@@ -7,7 +7,10 @@ public class ChangeScene : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        next_level();
+        if (collision.name == "hero")
+        {
+            next_level();
+        }
     }
 
 
